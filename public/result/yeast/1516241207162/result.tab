@@ -1,0 +1,86 @@
+inst#gene#sce00230#sce:YJL005W	same gene	inst#gene#sce04213#sce:YJL005W
+inst#gene#sce00620#sce:YEL071W	compound	inst#gene#sce00620#sce:YKL029C
+inst#gene#sce00500#sce:YKL035W	compound	inst#gene#sce00500#sce:YPR184W
+inst#gene#sce00071#sce:YPL061W	same gene	inst#gene#sce00280#sce:YPL061W
+inst#gene#sce00620#sce:YER178W	same gene	inst#gene#sce00010#sce:YER178W
+inst#gene#sce00071#sce:YDL168W	compound	inst#gene#sce00071#sce:YPL061W
+inst#gene#sce00620#sce:YAL054C	same gene	inst#gene#sce00010#sce:YAL054C
+inst#gene#sce00030#sce:YPR074C	compound	inst#gene#sce00030#sce:YKL060C
+inst#gene#sce00620#sce:YDL178W	compound	inst#gene#sce00620#sce:YER178W
+inst#gene#sce00220#sce:YPL111W	same gene	inst#gene#sce00330#sce:YPL111W
+inst#gene#sce00620#sce:YIR031C	compound	inst#gene#sce00620#sce:YAL054C
+inst#gene#sce00230#sce:YNL220W	same gene	inst#gene#sce00250#sce:YNL220W
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YDL166C
+inst#gene#sce00030#sce:YBR196C	compound	inst#gene#sce00030#sce:YLR354C
+inst#gene#sce00010#sce:YLR446W	compound	inst#gene#sce00010#sce:YBR019C
+inst#gene#sce00330#sce:YLR438W	compound	inst#gene#sce00330#sce:YHR033W
+inst#gene#sce00250#sce:YKL104C	same gene	inst#gene#sce00520#sce:YKL104C
+inst#compound#sce04213#cpd:C00575	activation	inst#gene#sce04213#sce:YJL164C
+inst#gene#sce00620#sce:YLR153C	same gene	inst#gene#sce00010#sce:YLR153C
+inst#gene#sce00520#sce:YLR446W	same gene	inst#gene#sce00052#sce:YLR446W
+inst#gene#sce04011#sce:YLR113W	inhibition#phosphorylation	inst#gene#sce04011#sce:YNL167C
+inst#gene#sce04011#sce:YMR172W	expression	inst#gene#sce04011#sce:YDL022W
+inst#gene#sce00230#sce:YDL140C	compound	inst#gene#sce00230#sce:YJL005W
+inst#gene#sce00620#sce:YIR031C	compound	inst#gene#sce00620#sce:YLR153C
+inst#gene#sce00052#sce:YBR019C	compound	inst#gene#sce00052#sce:YKL035W
+inst#gene#sce00030#sce:YHR163W	compound	inst#gene#sce00030#sce:YGR256W
+inst#gene#sce00500#sce:YKL035W	compound	inst#gene#sce00500#sce:YBR126C
+inst#gene#sce00030#sce:YPR074C	compound	inst#gene#sce00030#sce:YJL121C
+inst#gene#sce00030#sce:YBR196C	compound	inst#gene#sce00030#sce:YNL241C
+inst#gene#sce00010#sce:YER178W	compound	inst#gene#sce00010#sce:YAL038W
+inst#gene#sce00030#sce:YGR256W	compound	inst#gene#sce00030#sce:YGR248W
+inst#gene#sce00230#sce:YOR360C	compound	inst#gene#sce00230#sce:YML035C
+inst#gene#sce04011#sce:YCL032W	binding/association#activation	inst#gene#sce04011#sce:YLR362W
+inst#gene#sce00500#sce:YKL035W	compound	inst#gene#sce00500#sce:YDR074W
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YNL113W
+inst#gene#sce00620#sce:YOL151W	compound	inst#gene#sce00620#sce:YML004C
+inst#gene#sce00230#sce:YML035C	compound	inst#gene#sce00230#sce:YNL220W
+inst#gene#sce00220#sce:YMR062C	compound	inst#gene#sce00220#sce:YPL111W
+inst#gene#sce00010#sce:YAL054C	compound	inst#gene#sce00010#sce:YMR170C
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YDL140C
+inst#gene#sce00230#sce:YDR226W	compound	inst#gene#sce00230#sce:YOR360C
+inst#gene#sce00030#sce:YNL241C	compound	inst#gene#sce00030#sce:YHR163W
+inst#gene#sce04011#sce:YLR113W	activation#phosphorylation	inst#gene#sce04011#sce:YMR172W
+inst#gene#sce00620#sce:YOR040W	compound	inst#gene#sce00620#sce:YDL178W
+inst#gene#sce00520#sce:YKL104C	compound	inst#gene#sce00520#sce:YLR446W
+inst#gene#sce00010#sce:YDL168W	same gene	inst#gene#sce00071#sce:YDL168W
+inst#gene#sce00010#sce:YLR153C	compound	inst#gene#sce00010#sce:YMR169C
+inst#gene#sce00051#sce:YKL060C	compound	inst#gene#sce00051#sce:YML070W
+inst#gene#sce00250#sce:YNL220W	compound	inst#gene#sce00250#sce:YKL106W
+inst#gene#sce00010#sce:YBR019C	same gene	inst#gene#sce00052#sce:YBR019C
+inst#gene#sce00030#sce:YLR354C	compound	inst#gene#sce00030#sce:YPR074C
+inst#gene#sce00250#sce:YJL130C	compound	inst#gene#sce00250#sce:YKL104C
+inst#gene#sce00030#sce:YJL121C	same gene	inst#gene#sce00040#sce:YJL121C
+inst#gene#sce00250#sce:YNL220W	compound	inst#gene#sce00250#sce:YJL130C
+inst#gene#sce00030#sce:YKL060C	same gene	inst#gene#sce00051#sce:YKL060C
+inst#gene#sce04011#sce:YLR362W	activation#phosphorylation	inst#gene#sce04011#sce:YJL128C
+inst#gene#sce00010#sce:YGR087C	compound	inst#gene#sce00010#sce:YDL168W
+inst#gene#sce00520#sce:YBR196C	same gene	inst#gene#sce00030#sce:YBR196C
+inst#gene#sce00071#sce:YDL168W	compound	inst#gene#sce00071#sce:YOR374W
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YDR454C
+inst#gene#sce00620#sce:YKL029C	compound	inst#gene#sce00620#sce:YIR031C
+inst#gene#sce04213#sce:YJL005W	activation	inst#compound#sce04213#cpd:C00575
+inst#gene#sce00280#sce:YGR019W	same gene	inst#gene#sce00410#sce:YGR019W
+inst#gene#sce00280#sce:YPL061W	compound	inst#gene#sce00280#sce:YGR019W
+inst#gene#sce00520#sce:YLR446W	same gene	inst#gene#sce00010#sce:YLR446W
+inst#gene#sce00410#sce:YGR019W	compound	inst#gene#sce00410#sce:YMR250W
+inst#gene#sce00010#sce:YAL038W	same gene	inst#gene#sce00230#sce:YAL038W
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YOR340C
+inst#gene#sce00520#sce:YKL104C	compound	inst#gene#sce00520#sce:YBR196C
+inst#gene#sce00040#sce:YJL121C	compound	inst#gene#sce00040#sce:YGR194C
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YNL151C
+inst#gene#sce00010#sce:YER178W	compound	inst#gene#sce00010#sce:YGR087C
+inst#gene#sce00250#sce:YKL106W	same gene	inst#gene#sce00220#sce:YKL106W
+inst#gene#sce00220#sce:YKL106W	compound	inst#gene#sce00220#sce:YMR062C
+inst#gene#sce04011#sce:YMR037C	expression	inst#gene#sce04011#sce:YGR088W
+inst#gene#sce04011#sce:YJL128C	activation#phosphorylation	inst#gene#sce04011#sce:YLR113W
+inst#gene#sce00230#sce:YAL038W	compound	inst#gene#sce00230#sce:YDR226W
+inst#gene#sce00620#sce:YML004C	compound	inst#gene#sce00620#sce:YOR040W
+inst#gene#sce00052#sce:YKL035W	same gene	inst#gene#sce00500#sce:YKL035W
+inst#gene#sce04011#sce:YOL151W	same gene	inst#gene#sce00620#sce:YOL151W
+inst#gene#sce00230#sce:YDR454C	compound	inst#gene#sce00230#sce:YDR399W
+inst#gene#sce00052#sce:YLR446W	compound	inst#gene#sce00052#sce:YMR105C
+inst#gene#sce00330#sce:YPL111W	compound	inst#gene#sce00330#sce:YLR438W
+inst#gene#sce04011#sce:YNL167C	inhibition#expression	inst#gene#sce04011#sce:YOL151W
+inst#gene#sce00620#sce:YOR040W	compound	inst#gene#sce00620#sce:YEL071W
+inst#gene#sce04011#sce:YLR113W	activation#phosphorylation	inst#gene#sce04011#sce:YMR037C

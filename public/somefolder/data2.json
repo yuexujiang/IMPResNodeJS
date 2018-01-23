@@ -1,0 +1,38 @@
+{"name":"VirtualRoot",
+"children":[
+        {
+        "name":"News",
+        "url":"www.my-media-website.com/*",
+        "technos": ["PHP", "Javascript", "Silex", "NGINX", "Varnish"],  
+        "satisfaction": 0.5,
+        "host": { "some pathway": ["p-value: 0.0010154"] },
+        "children": [
+                    { 
+                        "url":"http://www.genome.jp/dbget-bin/www_bget?hsa:100",
+                        "name": "World",
+                        "technos": ["bbb","bbb","bbb"], 
+                        "host": { "some pathway2": ["p-value: 0.0010154"] },
+                        "satisfaction": -0.9
+                    }
+                    ,
+                    { 
+                        "name": "Sport",
+                        "satisfaction": 0.7,
+                        "children":[]
+                    }
+                    ]
+       
+        }
+        ,
+        {
+        "name": "haha",
+        "url": "www.my-media-website.com/*",
+        "technos": ["PHP", "Javascript", "Silex", "NGINX", "Varnish"],  
+        "satisfaction": 0.5,
+        "host": { "some pathway": ["p-value: 0.0010154"] },
+        "children": [
+                    {
+                    "name":"kk"
+                    }
+                    ]}
+        ]}

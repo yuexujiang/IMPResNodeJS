@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Jumbotron Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    
+    <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      
+      <a class="navbar-brand" href="/">HOME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse flex-row-reverse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/info">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/job">New Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tutorial">Tutorial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tool">Tools</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+
+
+      
+        <!-- Example row of columns -->
+       
+        <div>
+          <h2 class="text-center">IMPRes Usage Tutorial</h2>
+        </div>
+        
+        <div>
+            <p class="text-left font-weight-bold">How to submit a job</h3>
+            <p class="text-justify">To submit a job, first thing is to specify the organism you are working on.</p> 
+            <img src="/img/1.jpg">
+            <p class="text-justify">
+              Then you should upload the seed genes file. The seed genes are the root nodes where the pathways detection process begins. The seed
+            genes file format should be like below.... 
+            </p>
+            <img src="/img/2.jpg">
+            </p>
+            <p class="text-justify">
+            It contains the ID from KEGG database and String PPI database. If you do not integrate PPI into reference network, the String ID is not required.
+            You can use our <a href="/tool">gene list conventor tool</a> to convent your gene symbol list to our acceptable format.
+            </p>
+            <p class="text-justify">
+              Next, you need to provide some information about the target genes. They are the genes that become active during the process and show changes in their expression patterns. You 
+              can either upload your own target gene list as the format as seed genes, or you can let us determine target genes automatically
+              based on your target number.
+            </p>
+            <p class="text-justify">
+              Then you need to upload your expression data. You have to specify the data type of your expression data. If it is a case control type, the format should be a tab seperated .txt file like below...
+            </p>
+            <img src="/img/3.jpg">
+            <p class="text-justify">
+              Be sure to specify how many samples Control and Case have respectively. When it is a time-series data type, the format should be slike below...
+            </p>
+            <img src="/img/4.jpg">
+            <p class="text-justify">
+              Be sure to specify how many time points your data has and how many replicates each time point has. We have provide the <a href="/tool">Gene expression conventor</a> to help you convert you expression data to our acceptable format.
+            </p>
+            <p class="text-justify">
+              Finally, you can decide if integrating PPI data into reference network. <span class="text-danger font-weight-bold">Note:</span> integrating PPI data would make the calculating time increase dramaticaly, since the interactions in String
+              database is much more than the interactions in KEGG databse.
+            </p>
+            <img src="/img/5.jpg">
+            <p class="text-justify">We prepared two sample datasets for download. You can use them to try our web server or follow the format to create your own submission. One sample dataset is the yeast cell wall damage stress dataset used in our paper (case control).  The other one is the
+             yeast high osmolality stress dataset used in our paper (time-series).
+            </p>
+            <form method="get" action="/public/result/case">
+               <button class="col-sm-4 row"  type="submit">Download case control sample dataset</button>
+            </form>
+            <form method="get" action="/public/result/time">
+               <button class="col-sm-4 row"  type="submit">Download time-series sample dataset</button>
+            </form>
+  
+        
+        
+        
+
+      </div> <!-- /container -->
+
+    </main>
+
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <!--<script>window.jQuery || document.write('<script src="../../../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>-->
+    <!--<script src="../../../../assets/js/vendor/popper.min.js"></script>-->
+    <!--<script src="../../../../dist/js/bootstrap.min.js"></script>-->
+  </body>
+</html>

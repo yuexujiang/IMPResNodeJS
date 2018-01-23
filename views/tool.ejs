@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../../../favicon.ico">-->
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <!--<link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+ 
+    <!-- Custom styles for this template -->
+   
+    <link href="job.css" rel="stylesheet">
+    
+     <link href="starter-template.css" rel="stylesheet">
+  </head>
+
+  <body>
+     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      
+      <a class="navbar-brand" href="/">HOME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse flex-row-reverse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/info">Info</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/job">New Job</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tutorial">Tutorial</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/tool">Tools</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main role="main" class="container">
+      <!--<div class="starter-template">-->
+         <form method="POST" action="/tool" encType="multipart/form-data" id="needs-validation">
+          <h1 class="text-left">Gene list conventor</h1>
+      
+          <p class="font-italic text-left">Select the organism this tool for:</p>
+           <div class="form-group">
+            <!--<label for="exampleFormControlSelect1">Example select</label>-->
+              <select class="form-control col-sm-4" name="organism" id="exampleFormControlSelect1">
+                <option>human</option>
+                <option>yeast</option>
+              </select>
+          </div>
+     
+     
+          
+          <div class="form-group row">
+            <label for="seedfile" class="col-sm-4 col-form-label">Upload the gene list you wish to convert:</label>
+            <div class="col-sm-5">
+              <input type="file" class="form-control-file" name="genelist" id="genelist" required>
+            </div>
+          </div>
+            <div class="form-group">
+          <p>Your data should be one single column .txt file, one gene symbol per line.</p>
+        </div>
+          
+            <div class="form-group">
+          <button type="submit" class="btn btn-primary" id="btn_submit">Submit</button>
+        </div>
+          
+         <hr>
+          </form>
+          
+          <form method="POST" action="/tool" encType="multipart/form-data" id="needs-validation">
+          <h1 class="text-left">Gene expression conventor</h1>
+      
+          <p class="font-italic text-left">Select the organism this tool for</p>
+           <div class="form-group">
+            <!--<label for="exampleFormControlSelect1">Example select</label>-->
+              <select class="form-control col-sm-4" name="organism" id="exampleFormControlSelect1">
+                <option>human</option>
+                <option>yeast</option>
+              </select>
+          </div>
+          
+            
+          <div class="form-group row">
+            <label for="seedfile" class="col-sm-5 col-form-label">Upload the gene expression data you wish to convert:</label>
+            <div class="col-sm-5">
+              <input type="file" class="form-control-file" name="expfile" id="expfile" required>
+            </div>
+          </div>
+         
+          <div class="form-group">
+          <p>Your data should be a tab seperated .txt format matrix where the first column is the gene symbol.</p>
+        </div>
+          
+          
+          
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary" id="btn_submit">Submit</button>
+        </div>
+        
+      
+        
+      </form>
+      <!--</div>-->
+      
+           
+    </main>
+
+
+
+   <script type="text/javascript" src="job.js"></script>
+  </body>
+</html>

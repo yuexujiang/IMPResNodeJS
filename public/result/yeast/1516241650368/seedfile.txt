@@ -1,0 +1,5 @@
+abst#sce:YLR229C
+abst#sce:YGR014W
+abst#sce:YER118C
+abst#sce:YIL147C
+abst#sce:YCL032W
