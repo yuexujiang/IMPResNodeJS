@@ -3,8 +3,8 @@ var app = express();
 var bodyParser = require("body-parser");
 const fs=require('fs');
 const fileUpload = require('express-fileupload');
-const { exec } = require('child_process');
-const { spawn} = require('child_process');
+const  exec  = require('child_process');
+const  spawn = require('child_process');
 
 var sourceflag=1;
 
