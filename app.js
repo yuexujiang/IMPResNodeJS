@@ -3,8 +3,9 @@ var app = express();
 var bodyParser = require("body-parser");
 const fs=require('fs');
 const fileUpload = require('express-fileupload');
-const  exec  = require('child_process');
-const  spawn = require('child_process');
+const { exec } = require('child_process');
+const { spawn }= require('child_process');
+const request = require('request');
 
 var sourceflag=1;
 
@@ -17,7 +18,9 @@ app.use(express.static(__dirname+"/public"));
 //var datadir="somefolder/result_test50.json"
 var datadir="";
 
-app.get("/index", function(req, res){
+
+
+app.get("/impres/index", function(req, res){
    
    
       if(sourceflag===1)
@@ -32,23 +35,23 @@ app.get("/index", function(req, res){
     }
 });
 
-app.get("/", function(req, res){
+app.get("/impres", function(req, res){
     res.render("homepage.ejs");
 });
 
-app.get("/info", function(req, res){
+app.get("/impres/info", function(req, res){
     res.render("info.ejs");
 });
 
-app.get("/tool", function(req, res){
+app.get("/impres/tool", function(req, res){
     res.render("tool.ejs");
 });
 
-app.get("/job", function(req, res){
+app.get("/impres/job", function(req, res){
     res.render("job.ejs");
 });
 
-app.get("/tutorial", function(req, res){
+app.get("/impres/tutorial", function(req, res){
     res.render("tutorial.ejs");
 });
 app.get("/running", function(req, res){
@@ -75,7 +78,7 @@ app.get("/public/result/time",function(req, res) {
 // app.get("/campgrounds", function(req, res){
 //     res.render("campgrounds.ejs",{campgrounds:campgrounds});
 // });
-app.post("/tool",function(req, res) {
+app.post("/impres/tool",function(req, res) {
     var date = new Date();
     var organism = req.body.organism;
     var time=date.getTime();
@@ -145,7 +148,7 @@ app.post("/tool",function(req, res) {
 });
 
 
-app.post("/running", function(req, res){
+app.post("/impres/running", function(req, res){
     var date = new Date();
     var organism = req.body.organism;
     var time=date.getTime();
@@ -248,8 +251,8 @@ app.post("/running", function(req, res){
         
         console.log(stdout);
         sourceflag=2;
-        datadir="result/"+organism+"/"+temfolder+"result.json";
-        res.redirect("/index");
+        datadir="/result/"+organism+"/"+temfolder+"result.json";
+        res.redirect("/impres/index");
         });
         
         });
@@ -278,11 +281,9 @@ app.post("/running", function(req, res){
    
 });
 
-app.get("/campgrounds/new", function(req, res){
-   res.render("new.ejs"); 
-});
 
 app.listen(process.env.PORT, process.env.IP, function(){
-   console.log("The YelpCamp Server Has Started!");
+   console.log("The IMPRes Server Has Started!");
    console.log(__dirname);
+
 });

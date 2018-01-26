@@ -31,7 +31,7 @@
     position: fixed;
     top: 10px;
     right: 10px;
-    width: 280px;
+    width: 320px;
 }
 
 .details ul {
@@ -77,9 +77,8 @@
   position: fixed;
   top: 10px;
   left: 10px;
-  width: 200px;  
-}
-
+  width: 340px;  }
+  
 .filters .btn {
   margin: 1px;
   line-height: 1.3;
