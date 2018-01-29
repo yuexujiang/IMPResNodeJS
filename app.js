@@ -5,14 +5,13 @@ const fs=require('fs');
 const fileUpload = require('express-fileupload');
 const { exec } = require('child_process');
 const { spawn }= require('child_process');
-const request = require('request');
 
 var sourceflag=1;
 
 app.use(fileUpload());
 app.use(bodyParser.urlencoded({extended: true}));
 //app.set("view engine", "ejs");
-app.use(express.static(__dirname+"/public"));
+app.use(express.static(__dirname+"/mypublic"));
 
 
 //var datadir="somefolder/result_test50.json"
@@ -54,26 +53,27 @@ app.get("/impres/job", function(req, res){
 app.get("/impres/tutorial", function(req, res){
     res.render("tutorial.ejs");
 });
-app.get("/running", function(req, res){
+// app.get("/impres/running", function(req, res){
     
-    if(sourceflag===1)
-    {
-        res.render("homepage.ejs");
-    }
-    else
-    {
-        sourceflag=1;
-        res.render("running.ejs");
+//     if(sourceflag===1)
+//     {
+//         res.render("homepage.ejs");
+//     }
+//     else
+//     {
+//         sourceflag=1;
+//         res.render("running.ejs");
         
-    }
+//     }
 
+// });
+app.get("/impres/dlcase",function(req, res) {
+    res.download("./mypublic/myresult/yeast case control sample data.rar");
 });
-app.get("/public/result/case",function(req, res) {
-    res.download("public/result/yeast case control sample data.rar");
+app.get("/impres/dltime",function(req, res) {
+    res.download("./mypublic/myresult/yeast time series sample data.rar");
 });
-app.get("/public/result/time",function(req, res) {
-    res.download("public/result/yeast time series sample data.rar");
-});
+
 
 // app.get("/campgrounds", function(req, res){
 //     res.render("campgrounds.ejs",{campgrounds:campgrounds});
@@ -82,13 +82,13 @@ app.post("/impres/tool",function(req, res) {
     var date = new Date();
     var organism = req.body.organism;
     var time=date.getTime();
-    var folder="public/result/"+organism+"/"+time;
+    var folder="./mypublic/myresult/"+organism+"/"+time;
     exec('mkdir '+folder, (err, stdout, stderr) => {
         if (err) {
         return;
         }
         
-    var comfolder="public/result/"+organism+"/";
+    var comfolder="./mypublic/myresult/"+organism+"/";
     var temfolder=time+"/";
     console.log(req.body);
 
@@ -152,13 +152,13 @@ app.post("/impres/running", function(req, res){
     var date = new Date();
     var organism = req.body.organism;
     var time=date.getTime();
-    var folder="public/result/"+organism+"/"+time;
+    var folder="./mypublic/myresult/"+organism+"/"+time;
     exec('mkdir '+folder, (err, stdout, stderr) => {
         if (err) {
         return;
         }
         
-    var comfolder="public/result/"+organism+"/";
+    var comfolder="./mypublic/myresult/"+organism+"/";
     var temfolder=time+"/";
     var target_radio=req.body.radiotarget;
     var datatype=req.body.dataradio;
@@ -241,7 +241,7 @@ app.post("/impres/running", function(req, res){
             return;
         }
         
-        exec('java -jar ./runnable_kegg.jar '+para, (err, stdout, stderr) => {
+        exec('java -jar ./runnable_kegg2.jar '+para, (err, stdout, stderr) => {
         if (err) {
             console.log(err.message.toString());
             res.send("error");
@@ -251,7 +251,7 @@ app.post("/impres/running", function(req, res){
         
         console.log(stdout);
         sourceflag=2;
-        datadir="/result/"+organism+"/"+temfolder+"result.json";
+        datadir="/myresult/"+organism+"/"+temfolder;
         res.redirect("/impres/index");
         });
         

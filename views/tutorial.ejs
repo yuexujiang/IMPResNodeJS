@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     
-    <link href="/level1/starter-template.css" rel="stylesheet">
+    <link href="/mycss/starter-template.css" rel="stylesheet">
   </head>
 
   <body>
@@ -57,12 +57,12 @@
         <div>
             <p class="text-left font-weight-bold">How to submit a job</h3>
             <p class="text-justify">To submit a job, first thing is to specify the organism you are working on.</p> 
-            <img src="/img/1.jpg">
+            <img src="/myimg/1.jpg">
             <p class="text-justify">
               Then you should upload the seed genes file. The seed genes are the root nodes where the pathways detection process begins. The seed
             genes file format should be like below.... 
             </p>
-            <img src="/img/2.jpg">
+            <img src="/myimg/2.jpg">
             </p>
             <p class="text-justify">
             It contains the ID from KEGG database and String PPI database. If you do not integrate PPI into reference network, the String ID is not required.
@@ -76,11 +76,11 @@
             <p class="text-justify">
               Then you need to upload your expression data. You have to specify the data type of your expression data. If it is a case control type, the format should be a tab seperated .txt file like below...
             </p>
-            <img src="/img/3.jpg">
+            <img src="/myimg/3.jpg">
             <p class="text-justify">
               Be sure to specify how many samples Control and Case have respectively. When it is a time-series data type, the format should be slike below...
             </p>
-            <img src="/img/4.jpg">
+            <img src="/myimg/4.jpg">
             <p class="text-justify">
               Be sure to specify how many time points your data has and how many replicates each time point has. We have provide the <a href="/tool">Gene expression conventor</a> to help you convert you expression data to our acceptable format.
             </p>
@@ -88,14 +88,14 @@
               Finally, you can decide if integrating PPI data into reference network. <span class="text-danger font-weight-bold">Note:</span> integrating PPI data would make the calculating time increase dramaticaly, since the interactions in String
               database is much more than the interactions in KEGG databse.
             </p>
-            <img src="/img/5.jpg">
+            <img src="/myimg/5.jpg">
             <p class="text-justify">We prepared two sample datasets for download. You can use them to try our web server or follow the format to create your own submission. One sample dataset is the yeast cell wall damage stress dataset used in our paper (case control).  The other one is the
              yeast high osmolality stress dataset used in our paper (time-series).
             </p>
-            <form method="get" action="/public/result/case">
+            <form method="get" action="/impres/dlcase">
                <button class="col-sm-4 row"  type="submit">Download case control sample dataset</button>
             </form>
-            <form method="get" action="/public/result/time">
+            <form method="get" action="/impres/dltime">
                <button class="col-sm-4 row"  type="submit">Download time-series sample dataset</button>
             </form>
   
