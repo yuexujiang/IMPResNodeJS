@@ -4,8 +4,8 @@
         <title>ArchitectureTree Demo</title>
         <meta name="description" content="If you like this visualization, check out the source at https://github.com/marmelab/ArchitectureTree and make your own!">
         <meta charset="utf-8">
-        <link rel="stylesheet" href="/mycss/vendor/bootstrap.min.css" />
-        <link rel="stylesheet" href="/mycss/tree.css" />
+        <link rel="stylesheet" href="/impres_css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="/impres_css/tree.css" />
     </head>
     <body>
         <div class="container-fluid">
@@ -20,12 +20,12 @@
                 
                 <div style="text-align: center;">
                 <a href="<%=folder%>result_collapse.tab" download>
-                  <button>kkk</button>
+                  <button>Download tab seperated network</button>
                 </a>
                 </div>
 
                 <div ng-controller="filterCtrl">
-                    <ng-include src="'/myjs/angular.architectureTree/templates/filter.html'"></ng-include>
+                    <ng-include src="'/impres_js/angular.architectureTree/templates/filter.html'"></ng-include>
                 </div>
 
                 <div ng-controller="chartCtrl">
@@ -35,7 +35,7 @@
                 <div ng-controller="panelCtrl">
                     <div id="panel">
                         <div ng-if="detail">
-                            <ng-include src="'/myjs/angular.architectureTree/templates/panel-detail.html'"></ng-include>
+                            <ng-include src="'/impres_js/angular.architectureTree/templates/panel-detail.html'"></ng-include>
                         </div>
 
                         <!--<div ng-if="edit">-->
@@ -53,18 +53,18 @@
             </div>
         </div>
         <p id=folder><%=folder%>result.json</p>
-        <script src="/myjs/vendor/d3.v3.js"></script>
-        <script src="/myjs/vendor/angular.min.js"></script>
-        <script src="/myjs/d3.architectureTree.js"></script>
-        <script src="/myjs/angular.architectureTree/app.js"></script>
-        <script src="/myjs/angular.architectureTree/controllers/chart.js"></script>
-        <script src="/myjs/angular.architectureTree/controllers/filter.js"></script>
-        <script src="/myjs/angular.architectureTree/controllers/json-data.js"></script>
-        <script src="/myjs/angular.architectureTree/controllers/panel.js"></script>
-        <script src="/myjs/angular.architectureTree/controllers/undo.js"></script>
-        <script src="/myjs/angular.architectureTree/directives/tree-chart.js"></script>
-        <script src="/myjs/angular.architectureTree/directives/init-focus.js"></script>
-        <script src="/myjs/angular.architectureTree/services/data.js"></script>
-        <script src="/myjs/angular.architectureTree/services/bus.js"></script>
+        <script src="/impres_js/vendor/d3.v3.js"></script>
+        <script src="/impres_js/vendor/angular.min.js"></script>
+        <script src="/impres_js/d3.architectureTree.js"></script>
+        <script src="/impres_js/angular.architectureTree/app.js"></script>
+        <script src="/impres_js/angular.architectureTree/controllers/chart.js"></script>
+        <script src="/impres_js/angular.architectureTree/controllers/filter.js"></script>
+        <script src="/impres_js/angular.architectureTree/controllers/json-data.js"></script>
+        <script src="/impres_js/angular.architectureTree/controllers/panel.js"></script>
+        <script src="/impres_js/angular.architectureTree/controllers/undo.js"></script>
+        <script src="/impres_js/angular.architectureTree/directives/tree-chart.js"></script>
+        <script src="/impres_js/angular.architectureTree/directives/init-focus.js"></script>
+        <script src="/impres_js/angular.architectureTree/services/data.js"></script>
+        <script src="/impres_js/angular.architectureTree/services/bus.js"></script>
     </body>
 </html>

@@ -11,7 +11,7 @@ var sourceflag=1;
 app.use(fileUpload());
 app.use(bodyParser.urlencoded({extended: true}));
 //app.set("view engine", "ejs");
-app.use(express.static(__dirname+"/mypublic"));
+app.use(express.static(__dirname+"/impres_public"));
 
 
 //var datadir="somefolder/result_test50.json"
@@ -68,10 +68,10 @@ app.get("/impres/tutorial", function(req, res){
 
 // });
 app.get("/impres/dlcase",function(req, res) {
-    res.download("./mypublic/myresult/yeast case control sample data.rar");
+    res.download("./impres_public/impres_result/yeast case control sample data.rar");
 });
 app.get("/impres/dltime",function(req, res) {
-    res.download("./mypublic/myresult/yeast time series sample data.rar");
+    res.download("./impres_public/impres_result/yeast time series sample data.rar");
 });
 
 
@@ -82,13 +82,13 @@ app.post("/impres/tool",function(req, res) {
     var date = new Date();
     var organism = req.body.organism;
     var time=date.getTime();
-    var folder="./mypublic/myresult/"+organism+"/"+time;
+    var folder="./impres_public/impres_result/"+organism+"/"+time;
     exec('mkdir '+folder, (err, stdout, stderr) => {
         if (err) {
         return;
         }
         
-    var comfolder="./mypublic/myresult/"+organism+"/";
+    var comfolder="./impres_public/impres_result/"+organism+"/";
     var temfolder=time+"/";
     console.log(req.body);
 
@@ -152,13 +152,13 @@ app.post("/impres/running", function(req, res){
     var date = new Date();
     var organism = req.body.organism;
     var time=date.getTime();
-    var folder="./mypublic/myresult/"+organism+"/"+time;
+    var folder="./impres_public/impres_result/"+organism+"/"+time;
     exec('mkdir '+folder, (err, stdout, stderr) => {
         if (err) {
         return;
         }
         
-    var comfolder="./mypublic/myresult/"+organism+"/";
+    var comfolder="./impres_public/impres_result/"+organism+"/";
     var temfolder=time+"/";
     var target_radio=req.body.radiotarget;
     var datatype=req.body.dataradio;
@@ -251,7 +251,7 @@ app.post("/impres/running", function(req, res){
         
         console.log(stdout);
         sourceflag=2;
-        datadir="/myresult/"+organism+"/"+temfolder;
+        datadir="/impres_result/"+organism+"/"+temfolder;
         res.redirect("/impres/index");
         });
         
