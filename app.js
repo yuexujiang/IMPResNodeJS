@@ -5,7 +5,7 @@ const fs=require('fs');
 const fileUpload = require('express-fileupload');
 const { exec } = require('child_process');
 const { spawn }= require('child_process');
-
+ 
 var sourceflag=1;
 
 app.use(fileUpload());
@@ -32,6 +32,31 @@ app.get("/impres/index", function(req, res){
         res.render("index.ejs",{folder:datadir}); 
         
     }
+});
+
+app.get("/impres/:jobname1/:jobname2/:jobname3",function(req,res){
+    var des="/"+req.params.jobname1+"/"+req.params.jobname2+"/"+req.params.jobname3+"/";
+    
+    console.log(sourceflag);
+      if(fs.existsSync("imp_public"+des+"result.json"))
+ //    if(sourceflag==2)
+    {   
+        console.log("found file");
+     
+      return res.render("index.ejs",{folder:des}); 
+    }
+    else{
+   
+   console.log("didnt found after 10s");
+//    return res.redirect('https://impres-luke87.c9users.io/impres'+des);
+     setTimeout(function() {
+     return res.redirect('http://digbio.missouri.edu/impres'+des);
+    }, 30000);
+//   return res.render(req.originalUrl);
+    }
+  
+   
+   
 });
 
 app.get("/impres", function(req, res){
@@ -68,10 +93,10 @@ app.get("/impres/tutorial", function(req, res){
 
 // });
 app.get("/impres/dlcase",function(req, res) {
-    res.download("./imp_public/imp_result/yeast case control sample data.rar");
+    res.download("./imp_public/imp_result/yeast case control sample data.zip");
 });
 app.get("/impres/dltime",function(req, res) {
-    res.download("./imp_public/imp_result/yeast time series sample data.rar");
+    res.download("./imp_public/imp_result/yeast time series sample data.zip");
 });
 
 
@@ -233,7 +258,9 @@ app.post("/impres/running", function(req, res){
     
     console.log(comfolder+" "+datatype+" "+num1+" "+num2+" "+backnet+" "+ifcon+" "+seedfilename+" "+expfilename+" "+outfilename+" "+topnum+" "+ifend+" "+ifppi);
     var para=comfolder+" "+datatype+" "+num1+" "+num2+" "+backnet+" "+ifcon+" "+seedfilename+" "+expfilename+" "+outfilename+" "+topnum+" "+ifend+" "+ifppi;
-
+    
+   datadir="/imp_result/"+organism+"/"+temfolder;
+    
      exec('Rscript ./rserve.R', (err, stdout, stderr) => {
         if (err) {
             console.log(err.message.toString());
@@ -247,16 +274,15 @@ app.post("/impres/running", function(req, res){
             res.send("error");
             return;
         }
-        
-        
         console.log(stdout);
         sourceflag=2;
-        datadir="/imp_result/"+organism+"/"+temfolder;
-        res.redirect("/impres/index");
+        
+ //       res.redirect("/impres/index");
         });
         
         });
-    
+        
+      return res.redirect('http://digbio.missouri.edu/impres'+datadir);
   
         
     // res.send("running, wait to redirect!");
@@ -282,8 +308,9 @@ app.post("/impres/running", function(req, res){
 });
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
+var server=app.listen(8080, process.env.IP, function(){
    console.log("The IMPRes Server Has Started!");
    console.log(__dirname);
 
 });
+
