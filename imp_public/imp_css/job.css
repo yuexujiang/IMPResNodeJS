@@ -45,3 +45,27 @@ body {
 .hidden {
     visibility: hidden
 }
+
+.collapsible {
+  cursor: pointer;
+}
+
+.active, .collapsible:hover {
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #777;
+  color:white;
+  margin-bottom: 10px;
+}
+
+.pattern {
+  color:red;
+}
+.pInCont
+{
+  margin-bottom:0px;
+}

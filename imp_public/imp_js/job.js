@@ -3,6 +3,16 @@ var radio_auto=document.getElementById("autotarget");
 var targetfile=document.getElementById("targetfile")
 var targetnum=document.getElementById("targetnum")
 
+if(radio_user.checked)
+{
+    targetfile.removeAttribute("disabled");
+    targetnum.setAttribute("disabled","");
+}
+else if(radio_auto.checked)
+{
+    targetfile.setAttribute("disabled","");
+    targetnum.removeAttribute("disabled");
+}
 radio_user.addEventListener("click",function(){
     targetfile.removeAttribute("disabled");
     targetnum.setAttribute("disabled","");
@@ -43,6 +53,21 @@ sumitbutton.addEventListener("click",function(){
   
     
 })
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
 
 
 // Example starter JavaScript for disabling form submissions if there are invalid fields
