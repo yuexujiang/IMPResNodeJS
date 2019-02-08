@@ -50,7 +50,7 @@
       <!--<div class="starter-template">-->
          <form method="POST" action="/impres/running" encType="multipart/form-data" id="needs-validation">
           <h2 class="text-center">Job Submission</h2>
-      
+		<p class="text-center">example datasets can be downloaded in <a href="/impres/tutorial">Tutorial</a> page </p>
           <h3 class="font-italic text-left">Organism</h3>
            <div class="form-group">
             <!--<label for="exampleFormControlSelect1">Example select</label>-->
@@ -62,7 +62,15 @@
      
        <hr>
      
-          <h3 class="font-italic text-left">Seed genes</h3>
+          <div class="row">
+            <h3   class="font-italic text-left col-sm-auto">Seed genes</h3>
+            <a class="collapsible"><img style="height:16px"  src="https://img.icons8.com/office/16/000000/info.png"></a>
+            <div class="content">
+            <p>Seed genes format follows the pattern of <span class="pattern">abst#(KEGG ID or STRING ID)</span>, eg.</p>
+            <p class="pInCont">       abst#sce:YOR008C</p>
+            <p class="pInCont">       abst#4932.YOR008C</p>
+          </div>
+          </div>
           <div class="form-group row">
             <label for="seedfile" class="col-sm-2 col-form-label">Upload Seed gene file:</label>
             <div class="col-sm-5">
@@ -72,7 +80,18 @@
           <hr>
           
           
-          <h3 class="font-italic text-left">Target genes</h3>
+          <div class="row">
+            <h3   class="font-italic text-left col-sm-auto">Target genes</h3>
+            <a class="collapsible"><img style="height:16px"  src="https://img.icons8.com/office/16/000000/info.png"></a>
+            <div class="content">
+            <p>Target genes list folows the pattern of <span class="pattern">abst#(KEGG ID or STRING ID)</span>, eg.</p>
+            <p class="pInCont">         abst#sce:YKR009C</p>
+            <p class="pInCont">         abst#sce:YDL157C</p>
+            <p class="pInCont">         abst#sce:YER059W</p>
+            <p class="pInCont">         abst#sce:YML113W</p>
+            <p class="pInCont">         ...</p>
+          </div>
+          </div>
             <div class="form-group row">
                 <div class="form-check col-sm-3 ">
                   <input class="form-check-input " type="radio" name="radiotarget" id="usertarget" value="option1" checked>
@@ -95,7 +114,18 @@
           <hr>
         
 
-          <h3 class="font-italic text-left">Expression data</h3>
+          <div class="row">
+            <h3   class="font-italic text-left col-sm-auto">Expression data</h3>
+            <a class="collapsible"><img style="height:16px"  src="https://img.icons8.com/office/16/000000/info.png"></a>
+            <div class="content">
+            <p>Expression data is a tab seperated text file. Fisrt column is the gene ID following the pattern of <span class="pattern">abst#(KEGG ID or STRING ID)</span>.
+            Other columns are gene expression values in different conditions, eg</p>
+            <p class="pInCont">abst#sce:YLR154C-->0.76-->0.93-->1.00-->1.00-->0.12-->0.42</p>
+            <p class="pInCont">abst#sce:YKL012W-->0.12-->0.00-->0.16-->0.10-->0.00-->0.13</p>
+            <p class="pInCont">abst#sce:YJL147C-->1.00-->0.31-->0.00-->1.00-->0.05-->0.65</p>
+            <p class="pInCont">...</p>
+          </div>
+          </div>
           <div class="form-group row">
             <label for="expfile" class="col-sm-3 col-form-label">Upload expression data file:</label>
             <div class="col-sm-5">

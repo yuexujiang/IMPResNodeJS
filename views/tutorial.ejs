@@ -55,6 +55,16 @@
         </div>
         
         <div>
+			<p class="text-justify">We prepared two sample datasets for download. You can use them to try our web server or follow the format to create your own submission. One sample dataset is the yeast cell wall damage stress dataset used in our paper (case control).  The other one is the
+             yeast high osmolality stress dataset used in our paper (time-series).
+            </p>
+            <form method="get" action="/impres/dlcase">
+               <button  type="submit">Download case control example dataset</button>
+            </form>
+            <form method="get" action="/impres/dltime">
+               <button  type="submit">Download time-series example dataset</button>
+            </form>
+			
             <p class="text-left font-weight-bold">How to submit a job</h3>
             <p class="text-justify">To submit a job, first thing is to specify the organism you are working on.</p> 
             <img src="/imp_img/1.jpg">
@@ -66,7 +76,7 @@
             </p>
             <p class="text-justify">
             It contains the ID from KEGG database and String PPI database. If you do not integrate PPI into reference network, the String ID is not required.
-            You can use our <a href="/tool">gene list conventor tool</a> to convent your gene symbol list to our acceptable format.
+            You can use our <a href="/impres/tool">gene list conventor tool</a> to convent your gene symbol list to our acceptable format.
             </p>
             <p class="text-justify">
               Next, you need to provide some information about the target genes. They are the genes that become active during the process and show changes in their expression patterns. You 
@@ -82,22 +92,14 @@
             </p>
             <img src="/imp_img/4.jpg">
             <p class="text-justify">
-              Be sure to specify how many time points your data has and how many replicates each time point has. We have provide the <a href="/tool">Gene expression conventor</a> to help you convert you expression data to our acceptable format.
+              Be sure to specify how many time points your data has and how many replicates each time point has. We have provide the <a href="/impres/tool">Gene expression conventor</a> to help you convert you expression data to our acceptable format.
             </p>
             <p class="text-justify">
               Finally, you can decide if integrating PPI data into reference network. <span class="text-danger font-weight-bold">Note:</span> integrating PPI data would make the calculating time increase dramaticaly, since the interactions in String
               database is much more than the interactions in KEGG databse.
             </p>
             <img src="/imp_img/5.jpg">
-            <p class="text-justify">We prepared two sample datasets for download. You can use them to try our web server or follow the format to create your own submission. One sample dataset is the yeast cell wall damage stress dataset used in our paper (case control).  The other one is the
-             yeast high osmolality stress dataset used in our paper (time-series).
-            </p>
-            <form method="get" action="/impres/dlcase">
-               <button class="col-sm-4 row"  type="submit">Download case control sample dataset</button>
-            </form>
-            <form method="get" action="/impres/dltime">
-               <button class="col-sm-4 row"  type="submit">Download time-series sample dataset</button>
-            </form>
+            
   
         
         
