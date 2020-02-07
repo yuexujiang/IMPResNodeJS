@@ -1,10 +1,14 @@
+"use strict";
 var express = require("express");
 var app = express();
 var bodyParser = require("body-parser");
 const fs=require('fs');
 const fileUpload = require('express-fileupload');
-const { exec } = require('child_process');
-const { spawn }= require('child_process');
+//const { exec } = require('child_process');
+//const { spawn }= require('child_process');
+const exec= require('child_process').exec;
+const spawn= require('child_process').spawn;
+
  
 var sourceflag=1;
 
@@ -191,9 +195,11 @@ app.post("/impres/running", function(req, res){
     var num2=1;
     var backnet="output_net.txt";
     var ifcon="no";
+    
     var seedfilename=temfolder+"seedfile.txt";
     var expfilename=temfolder+"expfile.txt";
     var outfilename=temfolder+"result";
+    var profilename=temfolder+"proexpfile.txt";
     var topnum="1";
     var ifend="no";
     var ifppi="no";
@@ -204,6 +210,17 @@ app.post("/impres/running", function(req, res){
     {
         console.log("no file uploaded");
     }
+    
+    if (req.body.radioalgo==="option2")
+    {
+        let profile=req.files.profile;
+        profile.mv(comfolder+temfolder+"proexpfile.txt",function(err){
+          if (err)
+          console.log(err.message);
+        });
+        datatype="inte_pro";
+    }
+    
     let seedFile = req.files.seedfile;
     //console.log(seedFile.name);
     seedFile.mv(comfolder+temfolder+'seedfile.txt', function(err) {
@@ -244,8 +261,18 @@ app.post("/impres/running", function(req, res){
          num1=req.body.timepoint;
          num2=req.body.replicate;
     }
+    else if(datatype==="inte_pro")
+    {
+         num1=req.body.controlsam;
+         num2=req.body.casesam;
+    }
     
     if(req.body.ppiCheck==='on')
+    {
+        ifppi="yes";
+        
+    }
+    if (req.body.radioalgo==="option2")
     {
         ifppi="yes";
     }
@@ -256,8 +283,8 @@ app.post("/impres/running", function(req, res){
     //     ifppi="yes";
     // }
     
-    console.log(comfolder+" "+datatype+" "+num1+" "+num2+" "+backnet+" "+ifcon+" "+seedfilename+" "+expfilename+" "+outfilename+" "+topnum+" "+ifend+" "+ifppi);
-    var para=comfolder+" "+datatype+" "+num1+" "+num2+" "+backnet+" "+ifcon+" "+seedfilename+" "+expfilename+" "+outfilename+" "+topnum+" "+ifend+" "+ifppi;
+    console.log(comfolder+" "+datatype+" "+num1+" "+num2+" "+backnet+" "+ifcon+" "+seedfilename+" "+expfilename+" "+outfilename+" "+topnum+" "+ifend+" "+ifppi+" "+profilename);
+    var para=comfolder+" "+datatype+" "+num1+" "+num2+" "+backnet+" "+ifcon+" "+seedfilename+" "+expfilename+" "+outfilename+" "+topnum+" "+ifend+" "+ifppi+" "+profilename;
     
    datadir="/imp_result/"+organism+"/"+temfolder;
     
@@ -268,7 +295,7 @@ app.post("/impres/running", function(req, res){
             return;
         }
         
-        exec('java -jar ./runnable_kegg2.jar '+para, (err, stdout, stderr) => {
+        exec('java -jar ./version_11_7_2019.jar '+para, (err, stdout, stderr) => {
         if (err) {
             console.log(err.message.toString());
             res.send("error");
