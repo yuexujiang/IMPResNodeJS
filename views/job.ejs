@@ -57,10 +57,38 @@
               <select class="form-control col-sm-4" name="organism" id="exampleFormControlSelect1">
                 <option>human</option>
                 <option>yeast</option>
+				<option>maize</option>
               </select>
           </div>
      
        <hr>
+	   
+	             <div class="row">
+            <h3   class="font-italic text-left col-sm-auto">Algorithm</h3>
+            <a class="collapsible"><img style="height:16px"  src="https://img.icons8.com/office/16/000000/info.png"></a>
+            <div class="content">
+            <p>IMPRes v1.0 is for using gene expression only</p>
+			<p>IMPRes-Pro is for users who have transcriptomics data and proteomics datay</p>
+          </div>
+          </div>
+            <div class="form-group row">
+                <div class="form-check col-sm-3 ">
+                  <input class="form-check-input " type="radio" name="radioalgo" id="impres1" value="option1" checked>
+                  <label class="form-check-label" for="impres1">IMPRes 1.0</label>
+                </div>
+                
+            </div>
+            <div class="form-group row">
+                <div class="form-check col-sm-3 ">
+                  <input class="form-check-input" type="radio" name="radioalgo" id="imprespro" value="option2">
+                  <label class="form-check-label" for="imprespro">IMPRes-Pro</label>
+                </div>
+                <div class="col-sm-7">
+                  <label for="profile">Select protein expression data </label>
+                  <input type="file"  id="profile" name="profile" required disabled>
+                </div>
+            </div>
+          <hr>
      
           <div class="row">
             <h3   class="font-italic text-left col-sm-auto">Seed genes</h3>
